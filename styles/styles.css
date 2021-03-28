@@ -1,0 +1,517 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+  }
+  html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+  }
+  body {
+   
+    height: 100%;
+    overflow-x: hidden;
+    position: relative;
+  }
+
+  h1 {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 36px;
+    font-weight: normal;
+
+}
+
+h2 {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 36px;
+    font-weight: normal;
+
+}
+
+.white {
+    
+    color: white;
+
+}
+
+h3 {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 24px;
+    font-weight: normal;
+
+}
+
+a {
+    text-decoration: none;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 14px;
+    color: #060A24;
+
+}
+
+p {
+    font-family: 'IBM Plex Mono', monospace;
+font-size: 14px;
+color: #060A24;
+letter-spacing: 0;
+line-height: 24px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 16px 10px 16px;
+}
+.check {
+    display: none;
+  }
+
+
+
+  ul {
+    position: absolute;
+    top: 60px;
+    left: 100%;
+    transition: all ease 300ms;
+    background-color: blue;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    list-style: none;
+    padding: 4px;
+
+
+  }
+
+li {
+    padding: 16px;
+}
+
+li a {
+    color: white;
+    margin-top: 32px;
+   
+  }
+
+.mobilemenu {
+    width: 30px;
+    height: 30px;
+    position: relative;
+  }
+  .mobilemenu span {
+    width: 18px;
+    border: 1px solid;
+    display: block;
+    transition: all ease 300ms;
+    position: relative;
+    align-items: flex-end;
+   
+  }
+  .line2 {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  .check:checked + .mobilemenu .line1 {
+    transform: rotate(137deg);
+    top: 7px;
+  }
+
+  .check:checked + .mobilemenu .line2 {
+    opacity: 0;
+  }
+  .check:checked + .mobilemenu .line3 {
+    transform: rotate(-137deg);
+    top: -7px;
+  }
+  .check:checked ~ ul {
+    left: 0%;
+  }
+
+  #title {
+      padding: 30px 16px 30px 16px;
+  }
+  .title-btn, .contact-btn{
+    background-color: #00F3BB;
+    padding: 20px 60px 20px 60px;
+    border: none;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 56px ;
+    width: 100%;
+    transition: 0.4s;
+}
+
+button:hover {
+color: white;
+background: linear-gradient(225deg, #0000FE 0%, #00F0B8 100%);
+}
+
+  #episodes {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    justify-content: top;
+    flex-wrap: wrap;
+    margin-top: 24px;
+    padding: 64px 16px 145px 16px;
+  }
+
+  #episodes::before {
+    z-index: -1;
+    content: '';
+    top: 0;
+    left: 0;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image:linear-gradient(225deg, #0000FF 0%, #0000A3 100%);
+    background-size: cover;
+    background-position: top;
+    clip-path: polygon(0% 5%, 100% 0%, 100% 95%, 0% 100% );
+  }
+
+
+.iframes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 6px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+iframe {
+    width: 100%;
+   
+}
+.box {
+    margin: 6px 0px 6px 0px;
+    width: 100%;
+    height: auto;
+}
+
+#about {
+    position: relative;
+    padding: 0px 16px 32px 16px;
+    margin-top: -140px;
+}
+
+.position {
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+.position img {
+    max-height: 519px;
+}
+
+.image {
+    
+    width: auto;
+    align-items: center;
+    margin: 30px;
+}
+
+#gallery {
+    padding: 32px 0px 64px 0px ;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    padding: 16px;
+}
+
+.images{
+   display: flex;
+   flex-wrap: wrap;
+    min-width: 300px;
+    width: 100%;
+}
+
+.images img {
+    width: 100%;
+    position: relative;
+}
+
+
+#svgs {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    padding: 32px 16px 32px 16px;
+}
+
+.icons {
+    display: flex;
+    flex-direction: column;
+    align-items: top;
+    justify-content: center;
+    text-align: center;
+    padding-top: 56px;
+    align-content: center;
+    flex-wrap: nowrap;
+}
+
+.icons div{
+   
+    padding: 24px 60px 24px 60px;
+}
+
+#contact {
+position: relative;
+display: flex;
+flex-direction: column;
+position: relative;
+width: 100%;
+justify-content: center;
+align-items: center; 
+padding: 64px 16px 64px 16px; 
+}
+
+
+#contact::before {
+    z-index: -1;
+    content: '';
+    top: 0;
+    left: 0;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image:linear-gradient(225deg, #0000FF 0%, #0000A3 100%);
+    background-size: cover;
+    background-position: top;
+    clip-path: polygon(0% 10%, 100% 0%, 100% 100%, 0% 100% );
+  
+  }
+
+.content-contact {
+display: flex;
+flex-direction: column;
+justify-content: center;
+padding: 64px 0px 64px 0px;
+align-items: center; 
+text-align: center;
+}
+
+.content-contact div {
+    padding: 18px 0px 18px 0px;
+}
+
+footer {
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+align-items: center;
+padding: 16px ;
+flex-wrap: wrap;
+}
+
+footer div {
+    padding: 16px;
+}
+
+footer i {
+    padding: 0px 18px 0px 18px;
+    font-size: 16px;
+}
+
+
+@media only screen and (min-width: 1024px) {
+
+    h1 {
+        font-size: 64px;
+    }
+    
+    h2 {
+        font-size: 48px;
+    
+    }
+
+    h3 {
+        font-size: 24px;
+    }
+    
+    a {
+        font-size: 16px;
+    
+    }
+    
+    p {
+    font-size: 16px;
+    color: #060A24;
+    }
+
+
+ #checkbox {
+        display: none;
+    }
+
+    .mobilemenu {
+        display: none;
+    }
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 26px 100px 26px 100px;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    position: static;
+    flex-direction: row;
+    background-color: white;
+    
+      }
+
+li a {
+        padding-left: 48px;
+        color: black;
+        transition: 0.4s;
+    }
+
+li a:hover {
+   color: #00F3BB;
+   text-decoration:line-through;
+}
+
+li a:active {
+    color: #060A24 56%;
+    text-decoration:line-through;
+}
+
+
+
+
+
+
+    #title {
+        padding: 120px 200px 30px 200px;
+    }
+    .title-btn, .contact-btn{
+     width: auto;
+     font-size: 18px;
+     padding: 16px 59px 16px 59px;
+      
+  }
+  
+    #episodes {
+
+      padding: 120px 100px 145px 100px;
+    }
+  
+    #episodes::before {
+      z-index: -1;
+      content: '';
+      top: 0;
+      left: 0;
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      background-image:linear-gradient(225deg, #0000FF 0%, #0000A3 100%);
+      background-size: cover;
+      background-position: top;
+      clip-path: polygon(0% 10%, 100% 0%, 100% 90%, 0% 100% );
+    }
+  
+    #episodes .title {
+        padding-left: 100px;
+    }
+  
+  .iframes {
+      flex-direction: row;
+
+  }
+  
+ 
+  .box {
+      padding: 36px;
+      height: auto;
+      width: 50%;
+  }
+  
+  #about {
+      padding: 0px 200px 32px 200px;
+  }
+  
+  .position {
+      flex-direction: row;
+  }
+
+  .content-about {
+      max-width: 464px ;
+      min-width: 400px;
+  }
+  
+  .title {
+      padding: 32px 200px 32px;
+
+  }
+  
+  .images img {
+    width: 33.3%;
+    position: relative;
+  }
+  
+  #svgs {
+      padding-top: 0px;
+  }
+  
+  .icons {
+
+      flex-direction: row;
+      flex-wrap: nowrap;
+      padding: 56px 0px 0px 0px;
+      justify-content: space-around;
+
+   
+  }
+  
+  .icons div{
+     
+      padding: 24px 20px 24px 20px;
+  }
+  
+  
+  #contact::before {
+      z-index: -1;
+      content: '';
+      top: 0;
+      left: 0;
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      background-image:linear-gradient(225deg, #0000FF 0%, #0000A3 100%);
+      background-size: cover;
+      background-position: top;
+      clip-path: polygon(0% 10%, 100% 0%, 100% 100%, 0% 100% );
+    
+    }
+  
+
+
+  footer {
+  flex-direction: row;
+  flex-wrap: nowrap ;
+  }
+
+}
+  
+  
+
